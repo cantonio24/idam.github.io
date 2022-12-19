@@ -1,0 +1,96 @@
+==============================
+crear entorno virtual
+
+1. virtualenv venv
+
+==============================
+Activar entorno virtual
+
+1. .\venv\Scripts\activate
+
+==============================
+Integrar Firebase en Django 
+
+1. pip install django==3.2.11
+2. django-admin startproject SYSONENIT901491409 (SYSONE+NIT+NUMERO NIT)
+3. cd SYSONENIT901491409
+
+
+------------
+
+verifica creación de proyecto
+
+1. python manage.py migrate
+2. python manage.py runserver
+
+------------
+
+Creación del módulo o aplicación "syscoface"
+
+1. python manage.py startapp syscoface
+
+-----------
+Bootstrap 4
+
+1. pip install django-bootstrap4
+2. pip install django-widget-tweaks 
+3. pip install django-clear-cache
+=================================
+
+Registrar Bootstrap 4 y django-clear-cache en mi archivo settings.py 
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'syscoface', # Aplicación o módulo 'syscoface' 
+    'clear_cache', # Paquete django-clear-cache 
+    'bootstrap4', # Paquete Bootstrap 4 
+]
+
+==========================================
+Crear proyecto en FIREBASE con el nombre SYSONENIT901491409
+
+https://firebase.google.com/
+
+=============================================
+
+Integración del SDK de Firebase Admin
+
+1. pip install firebase-admin==5.2.0
+
+----
+Paso seguido nos dirigimos ala pestaña "Cuentas de servicio del proyecto"
+y generamos un archivo JSON con una clave privada haciendo
+clic en el botón Generar nueva clave privada.
+
+================================================
+
+Vista (Template)
+1.Ahora creo un directorio con el nombre templates 
+y dentro de el creo un archivo HTML llamado index.html
+
+2. creamos la primera vista en index.html
+
+
+==================================================
+
+DEPLOY EN HEROKU
+
+https://www.youtube.com/watch?v=r6RQqyUspkc
+https://dashboard.heroku.com/apps
+
+
+comandos 
+
+se debe hacer dentro de la carpeta SYSONENIT901491409
+
+heroku login
+heroku git:clone -a postres-r
+cd postres-r
+git add .
+git commit -am "make it better"
+git push heroku master
